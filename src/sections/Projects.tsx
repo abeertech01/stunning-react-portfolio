@@ -5,6 +5,8 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg"
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"
 import grainImage from "@/assets/images/grain.jpg"
 import Image from "next/image"
+import SectionHeader from "@/components/SectionHeader"
+import Card from "@/components/Card"
 
 const portfolioProjects = [
   {
@@ -49,29 +51,17 @@ export const ProjectsSection = () => {
   return (
     <section className="lg:py-24 pb-16">
       <div className="container">
-        <div className="flex justify-center">
-          <p className="bg-clip-text bg-linear-to-r from-emerald-300 to-sky-400 font-semibold text-transparent uppercase tracking-widest">
-            Real-World Results
-          </p>
-        </div>
-        <h2 className="mt-6 font-serif text-3xl md:text-5xl text-center">
-          Featured Projects
-        </h2>
-        <p className="mx-auto mt-4 max-w-md text-white/60 md:text-lg lg:text-lg text-center">
-          See how I transformed concepts into engaging digital experiences.
-        </p>
+        <SectionHeader
+          eyebrow="Real-World Results"
+          title="Featured Projects"
+          description="See how I transformed concepts into engaging digital experiences."
+        />
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
           {portfolioProjects.map((project) => (
-            <div
+            <Card
               key={project.title}
-              className="z-0 after:z-10 after:absolute relative after:inset-0 bg-gray-800 px-8 md:px-10 lg:px-20 pt-8 md:pt-12 lg:pt-16 rounded-3xl after:rounded-3xl after:outline-2 after:outline-white/20 after:-outline-offset-2 overflow-hidden after:content-[''] after:pointer-events-none"
+              className="px-8 md:px-10 lg:px-20 pt-8 md:pt-12 lg:pt-16 pb-0"
             >
-              <div
-                className="-z-10 absolute inset-0 opacity-5"
-                style={{
-                  backgroundImage: `url(${grainImage.src})`,
-                }}
-              ></div>
               <div className="lg:gap-16 lg:grid lg:grid-cols-2">
                 <div className="lg:pb-16">
                   <div className="inline-flex gap-2 bg-clip-text bg-linear-to-r from-emerald-300 to-sky-400 font-bold text-transparent text-sm uppercase tracking-widest">
@@ -110,7 +100,7 @@ export const ProjectsSection = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
