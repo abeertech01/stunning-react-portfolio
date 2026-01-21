@@ -9,6 +9,17 @@
   /* Font Family */
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
+
+  /* Animation */
+  --animate-ping-large: ping-large 1s ease-in-out infinite;
+
+  @keyframes ping-large {
+    75%,
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
 }
 
 /* Customizing the container utility */
