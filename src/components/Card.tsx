@@ -1,18 +1,18 @@
 import grainImage from "@/assets/images/grain.jpg"
+import { ComponentPropsWithoutRef } from "react"
 import { twMerge } from "tailwind-merge"
 export default function Card({
   className,
   children,
-}: {
-  className?: string
-  children: React.ReactNode
-}) {
+  ...others
+}: ComponentPropsWithoutRef<"div">) {
   return (
     <div
       className={twMerge(
         "z-0 after:z-10 after:absolute relative after:inset-0 bg-gray-800 rounded-3xl after:rounded-3xl after:outline-2 after:outline-white/20 after:-outline-offset-2 overflow-hidden after:content-[''] after:pointer-events-none",
         className,
       )}
+      {...others}
     >
       <div
         className="-z-10 absolute inset-0 opacity-5"
