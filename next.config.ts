@@ -37,6 +37,7 @@ const nextConfig: NextConfig = {
 
   // Next.js 16 stable configuration for Turbopack
   turbopack: {
+    root: "./",
     rules: {
       "*.svg": {
         loaders: ["@svgr/webpack"],
