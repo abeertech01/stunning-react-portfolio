@@ -114,8 +114,7 @@ export const AboutSection = () => {
             <Card className="md:col-span-3 lg:col-span-2 h-80">
               <CardHeader
                 title="My Toolbox"
-                description="Explore the technologies and tools I use to craft exceptional
-                digital experiences."
+                description="Explore the technologies and tools I use to craft exceptional digital experiences."
                 className=""
               />
               <ToolboxItems
